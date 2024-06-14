@@ -10,6 +10,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.util.Assert;
 
 import com.example.quiz.constants.OptionType;
+import com.example.quiz.entity.Quiz;
 import com.example.quiz.repository.QuizDao;
 import com.example.quiz.service.ifs.QuizService;
 import com.example.quiz.vo.BasicRes;
@@ -114,7 +115,13 @@ public class QuizServiceTests {
 		
 	}
 	
-	
+	@Test
+	public void updatetest() {
+		Quiz quiz = new Quiz(13,"§»¿\¶Y‘£?","§»¿\¶Y‘£?", LocalDate.of(2024, 6, 1),LocalDate.of(2024, 6, 30), "", false);
+		quizDao.save(quiz);
+		System.out.println("=============");
+		
+	}
 	
 	
 }
